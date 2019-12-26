@@ -13,3 +13,5 @@ LazyData: true
 RoxygenNote: 7.0.2
 Imports: 
     magrittr
+URL: https://github.com/MattCowgill/thearcfooty
+BugReports: https://github.com/MattCowgill/thearcfooty/issues
