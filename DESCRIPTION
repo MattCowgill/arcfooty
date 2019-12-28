@@ -4,14 +4,18 @@ Title: Tools To Help Create The Arc
 Version: 0.0.900
 Author: person("Matt", "Cowgill", email = "mattcowgill@gmail.com", role = "aut")
 Maintainer: Matt Cowgill <mattcowgill@gmail.com>
-Description: Tools to create content for thearcfooty.com.
+Description: R tools to create content for thearcfooty.com.
     Includes ggplot2 theme, AFL team colours, scrapers, Elo calculator, and
     other utility functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
+Depends: R (>= 2.10)
 Imports: 
-    magrittr
+    magrittr,
+    ggplot2,
+    patchwork,
+    extrafont
 URL: https://github.com/MattCowgill/thearcfooty
 BugReports: https://github.com/MattCowgill/thearcfooty/issues
