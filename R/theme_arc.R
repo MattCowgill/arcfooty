@@ -28,10 +28,19 @@ theme_arc <- function(base_size = 12,
                       base_family = "Lato",
                       base_line_size = base_size / 22,
                       base_rect_size = 0) {
-  check_font_available(base_family)
+
+  font_is_available <- check_font_available(base_family)
+
+  if (isFALSE(font_is_available)) {
+    base_family <- "sans"
+  }
 
   half_line <- base_size / 2
 
+  theme_grey(base_size = base_size,
+             base_family = base_family,
+             base_line_size = base_line_size,
+             base_rect_size = base_rect_size) %+replace%
   theme(
     line = element_line(
       colour = arc_dark_grey,
@@ -181,15 +190,11 @@ theme_arc <- function(base_size = 12,
 
 
 check_font_available <- function(font = "Lato") {
-  font_available <- font %in% fonts()
+  font_available <- font %in% extrafont::fonts()
 
   if (isFALSE(font_available)) {
-    warning(font, " font not available.")
+    warning(font, " font not available; using `sans`.")
   }
 
   invisible(font_available)
 }
-
-
-
-
