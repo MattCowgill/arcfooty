@@ -14,3 +14,8 @@ test_that("scatterplots without colour look correct", {
 })
 
 
+test_that("simple plot with footer looks correct", {
+    vdiffr::expect_doppelganger("scatterplot with footer",
+                                add_arc_footer(base_scatterplot))
+
+})
