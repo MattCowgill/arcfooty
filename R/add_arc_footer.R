@@ -1,6 +1,26 @@
+#' Add The Arc logo and URL footer to a ggplot2 plot
+#'
+#' @param plot ggplot2 chart to which a footer should be appended. Default is
+#' `ggplot2::last_plot()`
+#'
+#' @export
+#' @importFrom ggplot2 last_plot
 #' @import patchwork
 
-add_arc_footer <- function(plot) {
+add_arc_footer <- function(plot = ggplot2::last_plot()) {
+
+  if (inherits(plot, "arc_footer_plot")) {
+    return(plot)
+  } else {
+    return(append_arc_footer(plot))
+  }
+}
+
+# Internal function to actually add the footer
+append_arc_footer <- function(plot) {
+
+  user_plot <- plot
+
   # Define a blank plot to be used as a plot spacer
   # This doesn't leave a tiny margin, unlike patchwork::plot_spacer()
   my_spacer <- ggplot() +
@@ -25,8 +45,8 @@ add_arc_footer <- function(plot) {
     theme(plot.background = element_rect(fill = arc_green),
           plot.margin = margin())
 
-  wrap_plots(
-    wrap_elements(full = plot),
+  ret <- wrap_plots(
+    wrap_elements(full = user_plot),
     wrap_elements(full = footer),
     heights = unit(c(1, footer_height),
                    c("null", "mm")),
@@ -35,5 +55,8 @@ add_arc_footer <- function(plot) {
     theme(plot.background = element_rect(fill = arc_green),
           plot.margin = margin())
 
+  class(ret) <- c(class(ret), "arc_footer_plot")
+
+  return(ret)
 
 }

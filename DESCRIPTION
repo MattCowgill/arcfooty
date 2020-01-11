@@ -16,9 +16,11 @@ Imports:
     magrittr,
     ggplot2 (>= 3.3.0.900),
     patchwork (>= 1.0.0),
+    tibble,
     extrafont
 URL: https://github.com/MattCowgill/thearcfooty
 BugReports: https://github.com/MattCowgill/thearcfooty/issues
 Suggests: 
     testthat (>= 2.1.0),
-    vdiffr
+    vdiffr,
+    covr
