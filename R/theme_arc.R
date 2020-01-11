@@ -157,24 +157,25 @@ theme_arc <- function(base_size = 12,
                                  "pt"),
     plot.background = element_rect(colour = "white"),
     plot.title = element_text(
-      size = rel(1.2),
+      face = "bold",
+      size = rel(1.5),
       hjust = 0,
       vjust = 1,
       margin = margin(b = half_line)
     ),
-    plot.title.position = "panel",
+    plot.title.position = "plot",
     plot.subtitle = element_text(
       hjust = 0,
       vjust = 1,
-      margin = margin(b = half_line)
+      margin = margin(b = base_size)
     ),
     plot.caption = element_text(
-      size = rel(0.8),
-      hjust = 1,
+      size = rel(0.67),
+      hjust = 0,
       vjust = 1,
       margin = margin(t = half_line)
     ),
-    plot.caption.position = "panel",
+    plot.caption.position = "plot",
     plot.tag = element_text(
       size = rel(1.2),
       hjust = 0.5,

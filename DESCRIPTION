@@ -14,8 +14,11 @@ RoxygenNote: 7.0.2
 Depends: R (>= 2.10)
 Imports: 
     magrittr,
-    ggplot2,
-    patchwork,
+    ggplot2 (>= 3.3.0.900),
+    patchwork (>= 1.0.0),
     extrafont
 URL: https://github.com/MattCowgill/thearcfooty
 BugReports: https://github.com/MattCowgill/thearcfooty/issues
+Suggests: 
+    testthat (>= 2.1.0),
+    vdiffr
