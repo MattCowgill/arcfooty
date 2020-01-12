@@ -13,7 +13,6 @@
 #' overrides the value set by 'type'.
 #'
 #' @importFrom ggplot2 ggsave last_plot
-#' @importFrom tibble tribble
 #' @name arc_save
 #' @export
 arc_save <-
@@ -22,14 +21,6 @@ arc_save <-
            width = 169.333,
            type = "normal",
            height = NULL) {
-
-    chart_types <- tibble::tribble(
-                          ~type,   ~height,
-                       "normal", 103.18756,
-                         "tall",       127,
-                    "very_tall",   169.333,
-               "extremely_tall",   206.375
-               )
 
     if (!is.null(height)) {
       if(!is.null(type)) {
