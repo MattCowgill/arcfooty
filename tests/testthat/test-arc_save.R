@@ -24,7 +24,7 @@ test_file_exists <- function(type, func_name) {
 
 test_that("each save type works", {
 
-  lapply(chart_types$type,
+  lapply(arcfooty:::chart_types$type,
        test_file_exists,
        func_name = "arc_save")
 
