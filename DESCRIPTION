@@ -1,4 +1,4 @@
-Package: thearcfooty
+Package: arcfooty
 Type: Package
 Title: Tools To Help Create The Arc
 Version: 0.0.900
@@ -17,8 +17,8 @@ Imports:
     ggplot2 (>= 3.3.0.900),
     patchwork (>= 1.0.0),
     extrafont
-URL: https://github.com/MattCowgill/thearcfooty
-BugReports: https://github.com/MattCowgill/thearcfooty/issues
+URL: https://github.com/MattCowgill/arcfooty
+BugReports: https://github.com/MattCowgill/arcfooty/issues
 Suggests: 
     testthat (>= 2.1.0),
     vdiffr (>= 0.3.1),
