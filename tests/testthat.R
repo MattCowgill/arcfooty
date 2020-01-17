@@ -1,4 +1,4 @@
 library(testthat)
-library(thearcfooty)
+library(arcfooty)
 
-test_check("thearcfooty")
+test_check("arcfooty")
